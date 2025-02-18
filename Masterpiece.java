@@ -51,7 +51,6 @@ class MasterpiecePanel extends JPanel
     
     public void drawFlower(Graphics g, int x, int y)
     {   
-    	
          
         g.setColor(new Color(34, 139, 34)); 
         g.fillRect(x, y, 20, 150);
@@ -74,7 +73,7 @@ class MasterpiecePanel extends JPanel
         int[] leafY2 = {y + 70, y + 80, y + 50};
         g.fillPolygon(leafX2, leafY2, 3);
         g.setColor(Color.RED);
-        g.fillArc(x - 20, y - 70, 60, 60, 0, 180); 
+        g.fillArc(x - 20, y - 70, 60, 60, 0, 270); 
         g.fillArc(x - 40, y - 50, 60, 60, 90, 180); 
         g.fillArc(x + 2, y - 50, 60, 60, 270, 180); 
         g.fillArc(x - 18, y - 30, 60, 60, 180, 180); 
