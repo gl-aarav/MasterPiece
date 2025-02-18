@@ -63,9 +63,7 @@ class MasterpiecePanel extends JPanel
         g.fillRect(0, 350, 600, 10);
         
         for (int i = 0; i < 600; i+=5)
-        {
         	g.fillRect(i, 342, 2, 8);
-        }
         
         g.setColor(new Color(0, 128, 0)); 
         int[] leafX1 = {x - 10, x - 40, x};
