@@ -6,11 +6,8 @@
  * This program will draw three Flowers and print "Scenery" on the bottom.
  */ 
 
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Font;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import java.awt.*;
+import javax.swing.*;
 
 public class Masterpiece
 {
