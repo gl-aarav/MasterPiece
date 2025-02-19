@@ -3,7 +3,7 @@
  * Aarav Goyal
  * Masterpiece.java
  * 
- * This program will draw three bigger Flowers and print "Flower" on the bottom.
+ * This program will draw three bigger Flowers and print "Scenery" on the bottom.
  */ 
 
 import java.awt.Color;
@@ -22,7 +22,7 @@ public class Masterpiece
 
 	public void runIt()
 	{
-		JFrame frame = new JFrame("Flower Masterpiece");
+		JFrame frame = new JFrame("Scenery Masterpiece");
 		frame.setSize(1200, 950);
 		frame.setLocation(100, 50);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
@@ -53,15 +53,16 @@ class MasterpiecePanel extends JPanel
 		int flower3X = panelWidth / 2 + 200;
 		int flower3Y = panelHeight / 2;
 
-		drawFlower(g, flower1X, flower1Y); 
-		drawFlower(g, flower2X, flower2Y); 
-		drawFlower(g, flower3X, flower3Y);
+		drawMountains(g);
+		drawScene(g, flower1X, flower1Y); 
+		drawScene(g, flower2X, flower2Y); 
+		drawScene(g, flower3X, flower3Y);
 		//drawGrid(g);
 	}
 
 
-	public void drawFlower(Graphics g, int x, int y)
-	{   
+	public void drawScene(Graphics g, int x, int y)
+	{  
 		drawSun(g);
 
 		drawStems(g, x, y);
@@ -81,8 +82,7 @@ class MasterpiecePanel extends JPanel
 		drawClouds(g);
 
 		drawText(g);
-
-	}
+	} 
 
 	public void drawSun(Graphics g)
 	{
@@ -102,6 +102,35 @@ class MasterpiecePanel extends JPanel
 		g.fillRect(0, 800, 1200, 200);
 	}
 
+	public void drawMountains(Graphics g) 
+	{
+        g.setColor(Color.GRAY);
+        int[] mount1X = new int[]{-200, 100, 400};
+        int[] mount1Y = new int[]{800, 300, 800};
+        g.fillPolygon(mount1X, mount1Y, 3);  
+        
+        int[] mount2X = new int[]{100, 600, 1100};
+        int[] mount2Y = new int[]{800, 100, 800};
+        g.fillPolygon(mount2X, mount2Y, 3); 
+        
+        int[] mount3X = new int[]{800, 1100, 1400};
+        int[] mount3Y = new int[]{800, 300, 800};
+        g.fillPolygon(mount3X, mount3Y, 3); 
+        
+        g.setColor(new Color(169, 169, 169));
+        int[] mount4X = new int[]{27, 100, 173};
+        int[] mount4Y = new int[]{420, 300, 420};
+        g.fillPolygon(mount4X, mount4Y, 3);
+        
+        int[] mount5X = new int[]{443, 600, 757};
+        int[] mount5Y = new int[]{320, 100, 320};
+        g.fillPolygon(mount5X, mount5Y, 3);
+        
+        int[] mount6X = new int[]{1027, 1100, 1173};
+        int[] mount6Y = new int[]{420, 300, 420};
+        g.fillPolygon(mount6X, mount6Y, 3);
+    }
+	
 	public void drawLeaves(Graphics g, int x, int y)
 	{
 		g.setColor(new Color(0, 128, 0)); 
@@ -118,8 +147,11 @@ class MasterpiecePanel extends JPanel
 	{
 		g.setColor(new Color(126,200,80));
 		for (int i = 0; i < 1200; i+=7)
-			g.fillRect(i, 790, 3, 15);
-
+		{
+			int tall = (int)(Math.random()*15)+5;
+			g.fillRect(i, 800 - tall, 3, tall);
+		}
+		
 		g.setColor(new Color(86, 125, 50)); 
 		g.fillRect(0, 800, 1200, 20);		
 	}
@@ -180,7 +212,7 @@ class MasterpiecePanel extends JPanel
 	{
 		g.setColor(Color.BLACK);
 		g.setFont(new Font("serif", Font.PLAIN, 80));
-		g.drawString("Flower", 490, 900);
+		g.drawString("Scenery", 490, 900);
 	}
 
 	public void drawGrid(Graphics g)
