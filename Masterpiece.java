@@ -3,7 +3,7 @@
  * Aarav Goyal
  * Masterpiece.java
  * 
- * This program will draw three bigger Flowers and print "Scenery" on the bottom.
+ * This program will draw three Flowers and print "Scenery" on the bottom.
  */ 
 
 import java.awt.Color;
