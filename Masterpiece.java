@@ -66,7 +66,7 @@ class MasterpiecePanel extends JPanel
 		drawSun(g);
 
 		drawStems(g, x, y);
-		
+
 		drawSoil(g);
 
 		drawGrass(g);
@@ -104,33 +104,46 @@ class MasterpiecePanel extends JPanel
 
 	public void drawMountains(Graphics g) 
 	{
-        g.setColor(Color.GRAY);
-        int[] mount1X = new int[]{-200, 100, 400};
-        int[] mount1Y = new int[]{800, 300, 800};
-        g.fillPolygon(mount1X, mount1Y, 3);  
-        
-        int[] mount2X = new int[]{100, 600, 1100};
-        int[] mount2Y = new int[]{800, 100, 800};
-        g.fillPolygon(mount2X, mount2Y, 3); 
-        
-        int[] mount3X = new int[]{800, 1100, 1400};
-        int[] mount3Y = new int[]{800, 300, 800};
-        g.fillPolygon(mount3X, mount3Y, 3); 
-        
-        g.setColor(new Color(169, 169, 169));
-        int[] mount4X = new int[]{27, 100, 173};
-        int[] mount4Y = new int[]{420, 300, 420};
-        g.fillPolygon(mount4X, mount4Y, 3);
-        
-        int[] mount5X = new int[]{443, 600, 757};
-        int[] mount5Y = new int[]{320, 100, 320};
-        g.fillPolygon(mount5X, mount5Y, 3);
-        
-        int[] mount6X = new int[]{1027, 1100, 1173};
-        int[] mount6Y = new int[]{420, 300, 420};
-        g.fillPolygon(mount6X, mount6Y, 3);
-    }
-	
+		g.setColor(Color.GRAY);
+		int[] mount1X = {-200, 100, 400};
+		int[] mount1Y = {800, 300, 800};
+		g.fillPolygon(mount1X, mount1Y, 3);  
+
+		int[] mount2X = {100, 600, 1100};
+		int[] mount2Y = {800, 100, 800};
+		g.fillPolygon(mount2X, mount2Y, 3); 
+
+		int[] mount3X = {800, 1100, 1400};
+		int[] mount3Y = {800, 300, 800};
+		g.fillPolygon(mount3X, mount3Y, 3); 
+
+		g.setColor(new Color(239, 228, 221));
+		int[] mount4X = {27, 100, 173};
+		int[] mount4Y = {420, 300, 420};
+		g.fillPolygon(mount4X, mount4Y, 3);
+
+		int[] mount5X = {443, 600, 757};
+		int[] mount5Y = {320, 100, 320};
+		g.fillPolygon(mount5X, mount5Y, 3);
+
+		int[] mount6X = {1027, 1100, 1173};
+		int[] mount6Y = {420, 300, 420};
+		g.fillPolygon(mount6X, mount6Y, 3);
+
+
+		g.setColor(Color.BLACK);
+		g.drawLine(100, 300, 0, 466); 
+		
+		g.drawPolygon(mount2X, mount2Y, 3); 
+		
+		g.drawLine(100, 300, 250, 550);  
+		g.drawLine(600, 100, 937, 571);  
+
+		g.drawLine(1100, 300, 937, 571);  
+		g.drawLine(1100, 300, 1200, 466); 
+	}
+
+
 	public void drawLeaves(Graphics g, int x, int y)
 	{
 		g.setColor(new Color(0, 128, 0)); 
@@ -151,7 +164,7 @@ class MasterpiecePanel extends JPanel
 			int tall = (int)(Math.random()*15)+5;
 			g.fillRect(i, 800 - tall, 3, tall);
 		}
-		
+
 		g.setColor(new Color(86, 125, 50)); 
 		g.fillRect(0, 800, 1200, 20);		
 	}
