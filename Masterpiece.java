@@ -133,11 +133,10 @@ class MasterpiecePanel extends JPanel
 
 		g.setColor(Color.BLACK);
 		g.drawLine(100, 300, 0, 466); 
-		
-		g.drawPolygon(mount2X, mount2Y, 3); 
-		
-		g.drawLine(100, 300, 250, 550);  
-		g.drawLine(600, 100, 937, 571);  
+		g.drawLine(100, 300, 250, 550);   
+
+		g.drawLine(600, 100, 100, 800);   
+		g.drawLine(600, 100, 1100, 800);  
 
 		g.drawLine(1100, 300, 937, 571);  
 		g.drawLine(1100, 300, 1200, 466); 
