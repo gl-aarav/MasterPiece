@@ -63,16 +63,14 @@ class MasterpiecePanel extends JPanel
 	public void drawFlower(Graphics g, int x, int y)
 	{   
 		drawSun(g);
-	
+
 		drawStems(g, x, y);
-		
-		drawStems(g, x, y);
-		
-		drawLeaves(g, x, y);
 		
 		drawSoil(g);
 
 		drawGrass(g);
+
+		drawLeaves(g, x, y);
 
 		drawBirds(g);
 
@@ -91,7 +89,7 @@ class MasterpiecePanel extends JPanel
 		g.setColor(new Color(253, 184, 19));
 		g.fillOval(1000, -150, 300, 300);
 	}
-	
+
 	public void drawStems(Graphics g, int x, int y)
 	{
 		g.setColor(new Color(34, 139, 34)); 
@@ -118,11 +116,12 @@ class MasterpiecePanel extends JPanel
 
 	public void drawGrass(Graphics g)
 	{
-		g.setColor(new Color(34, 139, 34)); 
-		g.fillRect(0, 800, 1200, 20);
-
+		g.setColor(new Color(126,200,80));
 		for (int i = 0; i < 1200; i+=7)
 			g.fillRect(i, 790, 3, 15);
+
+		g.setColor(new Color(86, 125, 50)); 
+		g.fillRect(0, 800, 1200, 20);		
 	}
 
 	public void drawBirds(Graphics g)
@@ -130,7 +129,7 @@ class MasterpiecePanel extends JPanel
 		g.setColor(Color.BLACK);
 		g.drawArc(400, 75, 100, 50, 0, 90);
 		g.drawArc(500, 75, 100, 50, 90, 90);
-		
+
 		g.drawArc(600, 100, 100, 50, 0, 90);
 		g.drawArc(700, 100, 100, 50, 90, 90);
 	}
